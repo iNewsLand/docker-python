@@ -7,3 +7,8 @@ RUN set -e; \
   && apk add openssl-dev libxml2-dev libxslt-dev
 
 RUN pip install --upgrade pip
+
+RUN apk update && apk upgrade && \
+    apk add --no-cache bash git openssh
+
+RUN apk add build-base
